@@ -1,5 +1,13 @@
 --- 
+yaml_version: 6
+
 project:
+  title:        "RISC-V Protocol Emulator"
+  author:       "ALLEN DONALD BOSTON"
+  description:  "A PicoRV32-based programmable protocol engine for I2C/UART/USB emulation."
+  language:     "Verilog"
+  clock_hz:     50000000
+  tiles:        "6x4"
   source_files:
     - picorv32.v
     - rom_2k.v
