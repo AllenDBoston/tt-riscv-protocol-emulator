@@ -1,0 +1,10 @@
+name: gds
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  gds:
+    # Use the standard Tiny Tapeout build action
+    uses: TinyTapeout/tt-gds-action/.github/workflows/build.yaml@main

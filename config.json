@@ -1,0 +1,24 @@
+{
+    "DESIGN_NAME": "tt_um_riscv_protocol_emulator",
+    "VERILOG_FILES": [
+        "dir::src/*.v",
+        "dir::top/*.v"
+    ],
+    "CLOCK_PERIOD": 20.0,
+    "CLOCK_PORT": "clk",
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 200 150",
+    "FP_PDN_MACRO_HOOKS": [
+        "u_sram vccd1 vssd1 vccd1 vssd1"
+    ],
+    "MACRO_PLACEMENT": [
+        "u_sram sky130_sram_1kbyte_1rw1r 50 50 N"
+    ],
+    "EXTRA_LEFS": [
+        "dir::macros/sky130_sram_1kbyte_1rw1r.lef"
+    ],
+    "EXTRA_GDS_FILES": [
+        "dir::macros/sky130_sram_1kbyte_1rw1r.gds"
+    ],
+    "PL_TARGET_DENSITY": 0.45
+}

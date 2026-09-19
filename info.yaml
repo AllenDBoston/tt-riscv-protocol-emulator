@@ -1,0 +1,42 @@
+--- 
+project:
+  source_files:
+    - picorv32.v
+    - rom_2k.v
+    - dp_sram_1k.v
+    - soc_bus.v
+    - ppe_controller.v
+    - ppe_datapath.v
+    - ppe_tx_encoder.v
+    - ppe_rx_decoder.v
+    - ppe_serdes.v
+    - tt_um_riscv_protocol_emulator.v
+  top_module:  "tt_um_riscv_protocol_emulator"
+
+pinout:
+  ui[0]: "spi_miso"
+  ui[1]: "uart_rx"
+  ui[2]: "ppe_rx_0"
+  ui[3]: "ppe_rx_1"
+  ui[4]: "boot_cfg[0]"
+  ui[5]: "boot_cfg[1]"
+  ui[6]: "boot_cfg[2]"
+  ui[7]: "boot_cfg[3]"
+  
+  uo[0]: "spi_mosi"
+  uo[1]: "spi_clk"
+  uo[2]: "spi_cs_n"
+  uo[3]: "uart_tx"
+  uo[4]: "ppe_tx_0"
+  uo[5]: "ppe_tx_en"
+  uo[6]: "status_led_0"
+  uo[7]: "status_led_1"
+  
+  uio[0]: "i2c_sda"
+  uio[1]: "i2c_scl"
+  uio[2]: "nc"
+  uio[3]: "nc"
+  uio[4]: "nc"
+  uio[5]: "nc"
+  uio[6]: "nc"
+  uio[7]: "nc"
