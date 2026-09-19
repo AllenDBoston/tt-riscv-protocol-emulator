@@ -2,7 +2,7 @@
     "DESIGN_NAME": "tt_um_riscv_protocol_emulator",
     "VERILOG_FILES": [
         "dir::src/*.v",
-        "dir::top/*.v"
+        
     ],
     "CLOCK_PERIOD": 20.0,
     "CLOCK_PORT": "clk",
