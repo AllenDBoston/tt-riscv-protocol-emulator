@@ -9,11 +9,11 @@ module rom_2k (
 );
 
     // 512 x 32-bit words = 2048 bytes
-    reg [31:0] mem [0:511];
+    reg [31:0] mem [0:63];
 
     // Optional: Load firmware if present
     initial begin
-        $readmemh("../firmware.hex", mem, 0, 511);
+        $readmemh("../firmware.hex", mem, 0, 63);
     end
 
     always @(posedge clk) begin

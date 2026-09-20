@@ -20,7 +20,7 @@ module dp_sram_1k (
 );
 
     // 1024 bytes of memory
-    reg [7:0] mem [0:1023];
+    reg [7:0] mem [0:255];
 
     // Port A (CPU) - 32-bit access
     always @(posedge clk) begin

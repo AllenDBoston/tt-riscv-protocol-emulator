@@ -3,7 +3,7 @@
 
 _start:
     /* Initialize stack pointer */
-    li sp, 0x20000400 /* 0x20000000 + 1024 */
+    li sp, 0x20000100 /* 0x20000000 + 256 */
 
     /* Clear BSS */
     la a0, __bss_start
