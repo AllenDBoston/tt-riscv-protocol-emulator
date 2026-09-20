@@ -19,7 +19,7 @@ module rom_2k (
     always @(posedge clk) begin
         ack <= 0;
         if (req && !ack) begin
-            rdata <= mem[addr[10:2]];
+            rdata <= mem[addr[7:2]];
             ack <= 1;
         end
     end

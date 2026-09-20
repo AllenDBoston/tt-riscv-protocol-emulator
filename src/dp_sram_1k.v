@@ -26,16 +26,16 @@ module dp_sram_1k (
     always @(posedge clk) begin
         a_ack <= 0;
         if (a_req && !a_ack) begin
-            if (a_we[0]) mem[{a_addr[9:2], 2'b00}] <= a_wdata[7:0];
-            if (a_we[1]) mem[{a_addr[9:2], 2'b01}] <= a_wdata[15:8];
-            if (a_we[2]) mem[{a_addr[9:2], 2'b10}] <= a_wdata[23:16];
-            if (a_we[3]) mem[{a_addr[9:2], 2'b11}] <= a_wdata[31:24];
+            if (a_we[0]) mem[{a_addr[7:2], 2'b00}] <= a_wdata[7:0];
+            if (a_we[1]) mem[{a_addr[7:2], 2'b01}] <= a_wdata[15:8];
+            if (a_we[2]) mem[{a_addr[7:2], 2'b10}] <= a_wdata[23:16];
+            if (a_we[3]) mem[{a_addr[7:2], 2'b11}] <= a_wdata[31:24];
             
             a_rdata <= {
-                mem[{a_addr[9:2], 2'b11}],
-                mem[{a_addr[9:2], 2'b10}],
-                mem[{a_addr[9:2], 2'b01}],
-                mem[{a_addr[9:2], 2'b00}]
+                mem[{a_addr[7:2], 2'b11}],
+                mem[{a_addr[7:2], 2'b10}],
+                mem[{a_addr[7:2], 2'b01}],
+                mem[{a_addr[7:2], 2'b00}]
             };
             a_ack <= 1;
         end
@@ -46,9 +46,9 @@ module dp_sram_1k (
         b_ack <= 0;
         if (b_req && !b_ack) begin
             if (b_we) begin
-                mem[b_addr] <= b_wdata;
+                mem[b_addr[7:0]] <= b_wdata;
             end
-            b_rdata <= mem[b_addr];
+            b_rdata <= mem[b_addr[7:0]];
             b_ack <= 1;
         end
     end
